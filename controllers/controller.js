@@ -14,8 +14,8 @@ Livros = [
 const cadastraLivro = (req,res) => {
     const { preco, nome, autor, qtd_paginas, genero, lancamento} = req.body
 
-    if(!preco || !nome || !autor || !qtd_paginas || !genero || !lancamento) {
-        return res.status(400).json({Error: 'Por favor preencha todos os campos.'})
+    if(preco <= 0|| !nome || !autor || !qtd_paginas <= 0|| !genero || !lancamento) {
+        return res.status(400).json({Error: 'Por favor preencha todos os campos com valores válidos.'})
     }
 
     const Livro = {ID: Livros.length + 2, preco, nome, autor, qtd_paginas, genero, lancamento}
@@ -47,7 +47,7 @@ const atualizaLivro = (req,res) => {
     if(preco > 0){result.preco = preco}
     if(nome){result.nome = nome}
     if(autor){result.autor = autor}
-    if(qtd_paginas){result.qtd_paginas = qtd_paginas}
+    if(qtd_paginas > 0){result.qtd_paginas = qtd_paginas}
     if(genero){result.genero = genero}
     if(lancamento) {result.lancamento = lancamento}
 
