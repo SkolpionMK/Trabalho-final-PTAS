@@ -1,4 +1,6 @@
 # Trabalho final PTAS
+
+ChangeLog: V1.01: Um pequeno debug fora do prazo, não é necessário considera-lo se não quiser 
  
 Descrição: O projeto em questão se trata de um fake-site para procurar informações sobre livros, pode servir também como uma API FakeStore.
 
