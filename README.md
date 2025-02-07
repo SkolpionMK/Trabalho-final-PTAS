@@ -11,7 +11,7 @@ Como Inicializar o Servidor Passo a Passo:
 
 3- Inicie o projeto com o nodemon através do seguinte comando no console: npm run dev.
 
-4- Clique no Link gerado no console, ou digite no navegador de sua preferência a seguinte URL: http://localhost:3000
+4- Clique no Link gerado no console, ou digite no navegador de sua preferência a seguinte URL: http://localhost:3000/livros
 
 AVISOS: Através do navegador é um pouco complexo de se testar outros métodos de requisições HTTP além do GET, portanto recomendo usar o aplicativo Insomnia para tal coisa.
 
