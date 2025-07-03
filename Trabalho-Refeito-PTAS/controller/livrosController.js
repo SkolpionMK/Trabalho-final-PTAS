@@ -30,6 +30,8 @@ const buscaGeral = async (req, res) => {try{
 
 const buscaPorID = async (req,res) => {try{
     const id = req.params.id
+    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    console.log(ip)
     const result = await livrosModel.findById(id)
     if(!result) {
         return res.json({erro: true, Error: "Livro não encontrado", ID: ID})
